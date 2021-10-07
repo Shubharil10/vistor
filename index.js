@@ -103,7 +103,7 @@ function sendexmail(email,couth,coutm){
   };
   sgMail.send(msg);
 }
-
-app.listen(process.env.PORT || 2324,(req,res)=>{
-    console.log("UP AT 2324");
+const port =process.env.PORT || 2324;
+app.listen(port || 2324,(req,res)=>{
+    console.log('UP AT ${port}');
 })
